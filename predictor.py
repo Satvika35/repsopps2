@@ -14,3 +14,9 @@ def predict_questions():
     predicted = get_top_questions(frequency)
     
     return predicted
+
+if __name__ == "__main__":
+    result = predict_questions()
+    print("Predicted Questions:")
+    for question, count in result:
+        print(f"{question} ({count} times)")
